@@ -1,0 +1,1 @@
+# sequelize-cursor-pagination-lite
