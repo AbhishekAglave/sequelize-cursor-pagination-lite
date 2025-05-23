@@ -1,6 +1,6 @@
 {
   "name": "sequelize-cursor-pagination-lite",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Minimal and efficient cursor-based pagination utility for Sequelize models without extra count queries.",
   "main": "src/index.js",
   "scripts": {},
