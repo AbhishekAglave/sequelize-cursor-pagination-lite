@@ -1,0 +1,31 @@
+{
+  "name": "sequelize-cursor-pagination-lite",
+  "version": "1.0.0",
+  "description": "Minimal and efficient cursor-based pagination utility for Sequelize models without extra count queries.",
+  "main": "src/index.js",
+  "scripts": {},
+  "keywords": [
+    "sequelize",
+    "pagination",
+    "cursor",
+    "cursor-pagination",
+    "sequelize-pagination",
+    "sequelize-cursor-pagination-lite"
+  ],
+  "author": "Abhishek Aglave",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AbhishekAglave/sequelize-cursor-pagination-lite"
+  },
+  "bugs": {
+    "url": "https://github.com/AbhishekAglave/sequelize-cursor-pagination-lite/issues"
+  },
+  "homepage": "https://github.com/AbhishekAglave/sequelize-cursor-pagination-lite#readme",
+  "peerDependencies": {
+    "sequelize": "^6.0.0"
+  },
+  "devDependencies": {
+    "sequelize": "^6.0.0"
+  }
+}
