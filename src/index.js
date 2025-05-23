@@ -1,7 +1,15 @@
 const { Op } = require('sequelize');
+const { encodeCursor, decodeCursor } = require('./utils/cursor');
 
 function makeFindAllPaginated(model) {
   return async function ({ where = {}, limit = 10, after, before, order = [['id', 'DESC']] }) {
+    if (after) {
+      after = decodeCursor(after);
+    }
+    if (before) {
+      before = decodeCursor(before);
+    }
+
     const [sortField, sortDirection] = order[0];
     const isDesc = sortDirection.toUpperCase() === 'DESC';
 
@@ -28,11 +36,14 @@ function makeFindAllPaginated(model) {
     const first = result[0];
     const last = result[result.length - 1];
 
+    const newBefore = first ? encodeCursor(first[sortField]) : null;
+    const newAfter = last ? encodeCursor(last[sortField]) : null;
+
     return {
       records: result,
       cursor: {
-        before: first ? first[sortField] : null,
-        after: last ? last[sortField] : null
+        before: newBefore,
+        after: newAfter
       }
     };
   };
