@@ -16,7 +16,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AbhishekAglave/sequelize-cursor-pagination-lite"
+    "url": "git+https://github.com/AbhishekAglave/sequelize-cursor-pagination-lite.git"
   },
   "bugs": {
     "url": "https://github.com/AbhishekAglave/sequelize-cursor-pagination-lite/issues"
